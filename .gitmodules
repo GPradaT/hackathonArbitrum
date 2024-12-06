@@ -1,0 +1,3 @@
+[submodule "stylus-sdk-c"]
+	path = stylus-sdk-c
+	url = https://github.com/OffchainLabs/stylus-sdk-c.git
