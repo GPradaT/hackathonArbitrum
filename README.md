@@ -1,35 +1,31 @@
-# Arbitrum Stylus Starter Template for C
+# Lemon hackaton (Arbitrum Sepolia stylus-C smart contract developement)
 
-## Register and Storage Slots
+## What I did
 
-Storage slots are pretty similar to registers in 32bit architectures.
-Since both have:
+- I created a smart-contract which it can be activated or desactivated by his ownker
+- I created some function representations of the C standard library to use it in arbitrus-stylus-c, they have to be well tested to include it on sdk.h
+- The smart contract is functional, you can make, check, deploy, and play to see the simple use, read it and with make play but it's not activated yet.
+- I couldn't create a frontend.
+- I tried to use the storage.h but compiler doesn't let me work with those functions don't knowing why.
 
-1. Fixed Size: Storage slots in Ethereum can hold exactly 32 bytes. Similar to how registers have a fixed size in assembly (e.g., 32-bit, 64-bit).
+## Dificulties
 
-2. Direct Addressing: Just as you access a specific register by its identifier (eax, r1), you access storage slots using their indexes: 0x01, 0x02.
+- I couldn't understand how to use VM_HOOKs and the difference of use hostio.h or storage.h from sdk-c
+- I couldn't understand really well why are some libraries from js taht are in node-modules that I couldn't use.
+- I don't really understand how I have to pass the args parameter when I try to use bool or strings or int params, as I tried to use uint256 and didn't compiles
 
-3. Explicit Management: Like assembly programming, developers must explicitly manage how storage slots are allocated and used. Miss assignment of memory/slots can cause data corruption.
+## What I get from this event
 
-## Requisitos
+- As is my first time programming smart-contracts I learned a lot of JS as I never used it before.
+- Learn how to interact on the blockchain with code.
+- Strengthen the knowledgment on C and see more capabilities than I knew.
 
-- Brew (Mac) / Chocolatey (Windows)
-- Docker (Docker Desktop)
-- clang y maketools
-- LLVM (con wasm-ld): Disponible desde la versión 15 (llvm@15)
-- Rust cargo
+## The challenge SmartContract: 
+https://sepolia.arbiscan.io/address/0xbe385839383f18825b30c5011179198c0239dedb
 
-## Check to have `wasm-strip` installed
+They are 4 questions to get answered, the 5th first people who answer the 4 questions well will get a prize :D
+Ok the code is public but you need to create a frontend to get the prize, so, Up2You if you want the prize <3
 
-Podemos instalarlo con `brew install wabt`
+  
 
-## Instalando Cargo Stylus
 
-- `git submodule update --init --recursive`
-- `cargo install cargo-stylus`
-- `rustup target add wasm32-unknown-unknown`
-
-## Validar entorno de desarollo
-
-- `make` para generar el archivo contract.wasm
-- `cargo stylus check --wasm-file ./contract.wasm -e https://sepolia-rollup.arbitrum.io/rpc` (si tenemos output en verde estamos ok)
