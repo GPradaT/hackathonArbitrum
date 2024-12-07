@@ -10,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^22.10.1",
+    "@wagmi/core": "^2.15.2",
     "dotenv": "^16.4.7",
-    "viem": "^2.21.53"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "viem": "^2.21.54"
   }
 }

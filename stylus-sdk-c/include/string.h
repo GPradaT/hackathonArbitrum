@@ -4,7 +4,7 @@
 /**
  * Not at all a full implementation of string.h,
  * just the parts of it supported by simplelib
- * 
+ *
  * requirements: -
  * c-file: simplelib.c
  */
@@ -15,6 +15,11 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+//inline int memcmp(void *destination, const void *source, size_t num)
+//{
+//	return __builtin_memcmp(destination, source, num);
+//}
 
 inline void *memcpy(void *destination, const void *source, size_t num) {
     return __builtin_memcpy(destination, source, num);
